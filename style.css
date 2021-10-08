@@ -1,0 +1,42 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #016f32;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+h1 {
+  color: goldenrod;
+}
+
+#message-el {
+  font-style: italic;
+  color: rgb(7, 7, 66);
+}
+
+button {
+  color: #016f32;
+  width: 150px;
+  background-color: goldenrod;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  letter-spacing: 3px;
+}
+
+.blinkingText{
+  animation: blinkingText 1.5s infinite;
+}
+@keyframes blinkingText{
+  0% { color: rgb(7, 7, 66); }
+  49% { color: rgb(7, 7, 66); }
+  60% { color: transparent }
+  99% { color: transparent }
+  100% { color: rgb(7, 7, 66); }
+}
