@@ -5,18 +5,29 @@ body {
   color: #fff;
   font-weight: bold;
   font-size: 40px;
+  overflow: hidden;
 }
 
 h1 {
   color: goldenrod;
 }
 
-#message-el {
+#message-el, #new-game-msg-el {
   font-style: italic;
   color: rgb(7, 7, 66);
 }
 
-button {
+#new-game-msg-el {
+  visibility: hidden;
+}
+
+.button-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#startGameBtn, #newCardBtn {
   color: #016f32;
   width: 150px;
   background-color: goldenrod;
@@ -34,9 +45,51 @@ button {
   animation: blinkingText 1.5s infinite;
 }
 @keyframes blinkingText{
-  0% { color: rgb(7, 7, 66); }
-  49% { color: rgb(7, 7, 66); }
+  0% { color: #B4F8C8; }
+  49% { color: #B4F8C8; }
   60% { color: transparent }
   99% { color: transparent }
-  100% { color: rgb(7, 7, 66); }
+  100% { color: #B4F8C8; }
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 767.98px) {
+  body {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 598.98px) {
+  body {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 498.98px) {
+  body {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 424.98px) {
+  body {
+    font-size: 22px;
+  }
+
+  .button-flex {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 364.98px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 334.98px) {
+  body {
+    font-size: 18px;
+  }
 }

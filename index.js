@@ -10,6 +10,7 @@ let player = {
 const startGameBtn = document.querySelector("#startGameBtn");
 const newCardBtn = document.querySelector("#newCardBtn");
 const messageEl = document.querySelector("#message-el");
+const newGameMsgEl = document.querySelector("#new-game-msg-el");
 const sumEl = document.querySelector("#sum-el");
 const cardsEl = document.querySelector("#cards-el");
 const playerEl = document.querySelector("#player-el");
@@ -23,6 +24,7 @@ function getRandomCard() {
 }
 
 function startGame() {
+  newGameMsgEl.style.visibility = 'hidden';
   isAlive = true;
   hasBlackJack = false;
   let firstCard = getRandomCard();
@@ -46,10 +48,12 @@ function renderGame() {
     `<p class="blinkingText">
       You've got Blackjack!
     </p>`;
+    newGameMsgEl.style.visibility = 'visible';
     player.chips += 100;
     hasBlackJack = true;
-  } else {
-    messageEl.textContent = "You're out of the game! Hit START GAME to try again.";
+  } else if (sum > 21) {
+    messageEl.textContent = "You're out of the game!";
+    newGameMsgEl.style.visibility = 'visible';
     player.chips -= 25;
     isAlive = false;
   }
