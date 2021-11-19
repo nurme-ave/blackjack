@@ -4,19 +4,27 @@
   box-sizing: border-box;
 }
 
-.container {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   background-color: #016f32;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
   color: #fff;
   font-weight: bold;
   font-size: 40px;
   overflow: hidden;
   width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  height: 90vh;
 }
 
 h1 {
@@ -80,6 +88,7 @@ h1 {
 @media screen and (max-width: 498.98px) {
   .container {
     font-size: 25px;
+    height: 75vh;
   }
 }
 
