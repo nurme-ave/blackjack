@@ -76,6 +76,7 @@ function renderGame() {
     player.chips -= 25;
     isAlive = false;
   }
+  playerEl.style.visibility = 'visible';
   playerEl.textContent = `${player.title}: € ${player.chips}`
 }
 
