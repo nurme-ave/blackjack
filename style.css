@@ -25,6 +25,7 @@ body {
   overflow: hidden;
   width: 100vw;
   height: 90vh;
+  position: fixed;
 }
 
 h1 {
